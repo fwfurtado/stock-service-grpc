@@ -1,0 +1,17 @@
+syntax = 'proto3';
+option java_multiple_files = true;
+option java_package = 'br.com.caelum.stock.grpc';
+option java_outer_classname = "StockServiceProtos";
+
+message ItemRequest {
+  string code = 1;
+}
+
+message ItemResponse {
+  string code = 1;
+  int32 quantity = 2;
+}
+
+service StockService {
+  rpc findBy(ItemRequest) returns (ItemResponse);
+}

@@ -1,0 +1,9 @@
+grpc:
+  port: 6565
+
+---
+spring:
+  profiles: test
+
+grpc:
+  port: 0
